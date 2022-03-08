@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros passos com DOM</title>
+    <style>
+        body {
+            background: black;
+            color: white;
+            font: normal 18pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Iniciando estudos com DOM</h1>
+    <p>Aqui vai o resultado</p>
+    <p>Aprendendo a usar o <strong>DOM</strong> em JavaScript</p> 
+    <div name="msg2" id="msg">Clique em mim</div>
+    <script>
+        /*var p1 = window.document.getElementsByTagName('p')[0] //Seleciona os elementos do DOM
+        window.document.write('O primeiro parágrafo, está escrito assim: ' + p1.innerText)*/ //Escreve na tela concatenado
+
+        /*var p1 = window.document.getElementsByTagName('p')[0]
+        p1.style.color = 'blue'*/
+
+        /*var corpo = window.document.body
+        corpo.style.background = 'purple'*/
+
+        /*var titulo = window.document.querySelector('h1')
+        titulo.style.color = 'yellow'*/
+
+        /*var p1 = window.document.getElementsByTagName('p')[1]
+        document.write(p1.innerHTML) // Com innerHTML o texto já vai formatado
+        window.alert(p1.innerText)*/ // Da para usar nos alertas tambem
+
+        /*var d = window.document.getElementById('msg')
+        d.style.background = 'green'*/
+        //d.innerText = 'Estou aguardando' // Este comando muda o conteúdo da div
+        //window.document.getElementById('msg').innerText = 'Olá' // Este comando também
+
+        /*var d = window.document.getElementsByName('msg2')[0]
+        d.innerText = 'Olá!'*/
+
+        /*var d = window.document.querySelector('div#msg') // As div são representadas por # e as classes por .
+        d.style.background = 'yellow'
+        d.style.color = 'black'
+        d.innerHTML = "Eu sou foda"*/
+
+        //window.document.write(window.navigator.appName)//Mostra na tela o nome do navegador
+        //window.document.write(window.document.URL) //Mostra na tela a URL atual 
+    </script>
+</body>
+</html>

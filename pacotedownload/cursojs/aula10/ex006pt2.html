@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM</title>
+    <style>
+        div#area {
+            font: normal 20pt Arial;
+            background: greenyellow;
+            color: white;
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="area"> 
+        Interaja...
+    </div>
+
+    <script>
+        /*Além de disparar os eventos diretamente pelo HTML como na pt01 deste exercício...
+        Podemos disparar através de Listeners (ouvidores) que prestam atenção, dentro do próprio JavaScript*/
+        //Neste exercício vou usar o objeto 'a' com escopo global, conforme abaixo...
+        
+        //Acho que os Listeners só funcionam no escopo global, porém, não tenho certeza
+
+        var a = window.document.getElementById('area')
+        a.addEventListener('click' , clicar)
+        a.addEventListener('mouseenter' , entrar)
+        a.addEventListener('mouseout' , sair)
+
+        function clicar() {
+            //Tudo que estiver aqui dentro do bloco, será executado somente quando chamar a ação "clicar()" 
+            a.innerText = 'Clicou!' //E este objeto muda o conteúdo para 'Clicou!'
+            a.style.color = 'red'
+        }
+        function entrar() {
+            var a = document.getElementById('area')
+            a.innerText = 'Entrou!'
+            
+        }
+        function sair() {
+            var a = document.getElementById('area')
+            a.innerText = 'Saiu!'
+            a.style.color = 'white'
+            
+        }
+    </script>
+</body>
+</html>

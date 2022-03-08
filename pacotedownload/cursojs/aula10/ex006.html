@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM</title>
+    <style>
+        div#area {
+            font: normal 20pt Arial;
+            background: greenyellow;
+            color: white;
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="area" onclick="clicar()" onmouseenter="entrar()" onmouseout="sair()"> 
+        Interaja...
+    </div>
+    <!--Nome do evento e ou método é onclick. Ele vai chamar a ação que eu quiser, ex.: clicar -->
+    <!--Quando eu clicar em cima da div, o metodo irá disparar a ação, que neste caso é clicar -->
+
+    <script>
+        function clicar() {
+            //Tudo que estiver aqui dentro do bloco, será executado somente quando chamar a ação "clicar()"
+            var a = window.document.getElementById('area') //Isso faz a ligação deste objeto "a" com o elemento de id "area" que está dentro do HTML
+            a.innerText = 'Clicou!' //E este objeto muda o conteúdo para 'Clicou!'
+            a.style.color = 'red'
+        }
+        function entrar() {
+            var a = document.getElementById('area')
+            a.innerText = 'Entrou!'
+        }
+        function sair() {
+            var a = document.getElementById('area')
+            a.innerText = 'Saiu!'
+            a.style.color = 'white'
+        } /*É possível criar o objeto 'a' do lado de fora das funções, para ficar com escopo global, e servir para as 3 functions*/
+    </script>
+    
+</body>
+</html>

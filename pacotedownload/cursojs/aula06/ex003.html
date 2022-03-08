@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu primeiro programa</title>
+    <style>
+        body {
+            background-color: rgb(105,105,173);
+            color: white; /*Comentário em CSS*/
+            font: normal 20pt Arial;
+        }
+        h1 {
+            color: rgb(255, 212, 22);
+        }
+    </style>
+</head>
+<body>
+    <h1>Olá mundo!</h1> <!--Isso é um comentário em HTML-->
+    <p>Já me livrei da maldição</p>
+    <script>
+        var n1 = Number(window.prompt('Digite um número: ')); //Number.parseInt ou parseFloat também funciona. 
+        var n2 = Number(window.prompt('Digite outro número: ')); // Usar o Number não é obrigatório no caso dos parseInt e parseFloat
+        var s = (n1 + n2);
+        window.alert('A soma dos valores é ' + s);//Pra converter para String, posso fazer s.toString() ou String(s)
+        //Posso usar também --> window.alert(`A soma entre ${n1} e ${n2} é igual a ${s}`)
+        /*O JavaScript trata tudo por padrão como String, por isso devemos converter para Number neste caso*/
+        /*Podemos usar o length para ver quantos caracteres a String possui, ex.: s.length
+        s.toUpperCase() joga tudo para maiúsculas
+        s.toLowerCase() joga tudo para minúsculas*/
+    </script>
+</body>
+</html>

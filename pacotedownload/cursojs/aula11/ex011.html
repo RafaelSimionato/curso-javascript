@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de pessoas</title>
+</head>
+<style>
+    body {
+        background: #000;
+        color: #fff;
+        font: normal 20pt Arial;
+    }
+    input#txtp {
+        width: 200px;
+        height: 25px;
+        color: #000;
+    }
+    input#bt {
+        width: 100px;
+        height: 25px;
+    }
+    div#res {
+        line-height: 50px;
+    }
+</style>
+<body>
+    <!--Exercício proposto-->
+    <h1>Cadastro de Turistas</h1>
+    <p>Seja bem vindo(a) ao cadastro oficial de turistas</p>
+    <p>Digite no campo abaixo, o seu país de nascimento: </p>
+    <input type="text" name="txtp" id="txtp">
+    <input type="button" value="Confirma" name="bt" id="bt" onclick="clicar()">
+    <div id="res">
+
+    </div>    
+    <script>
+        function clicar() {
+            var pais = document.querySelector('input#txtp')
+            var res = document.querySelector('div#res')
+            var pessoa = (pais.value)  
+            
+            if (pessoa == 'Brasil') {
+                res.innerHTML = ` Se você nasceu no ${pessoa} você é brasileiro.`
+            } else {
+                res.innerHTML = `Se você nasceu em ${pessoa}, você é estrangeiro.`
+            }
+        }
+    </script>
+</body>
+</html>
